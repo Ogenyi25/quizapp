@@ -9,20 +9,19 @@
 <body>
     <h1>Maths Quiz App</h1>
     <div class="quiz-wrapper">
-        <div class="question">
-            What is the full meaning of HTML?
+        <div class="question" id="questionContainer">
         </div>
         <div class="options">
             <ul>
-                <li>Hyper Text Markup Language</li>
-                <li>High Text Making Language</li>
-                <li>Higher Tabular Markup Language</li>
-                <li>None of these</li>
+                <li id="opt1" onclick="button(this)"></li>
+                <li id="opt2" onclick="button(this)"></li>
+                <li id="opt3" onclick="button(this)"></li>
+                <li id="opt4" onclick="button(this)"></li>
             </ul>
         </div>
         <div class="score-card">
             <div class="score">
-                Score : <span>12</span>
+                Score : <span id="scoreCard"></span>
             </div>
             <div class="next">
                 <button type="button">Next</button>
