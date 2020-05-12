@@ -20,7 +20,7 @@ var app = {
         opt2.innerHTML = this.questions[this.index].options[1];
         opt3.innerHTML = this.questions[this.index].options[2];
         opt4.innerHTML = this.questions[this.index].options[3];
-        scoreCard.innerHTML=this.questions.length+ "/" +this.score;
+        
 
     },
 
@@ -28,13 +28,21 @@ var app = {
 
         var id=e.id.split('');
         if(id[id.length - 1]==this.questions[this.index].answer){
-            console.log('correct')
+            this.score++;
+            e.className="correct";
+            e.innerHTML="Correct"
+            this.scoreCard();
         }else {
-            console.log('wrong')
+            e.className="wrong";
+            e.innerHTML="Wrong!!"
         }
         
     },
-    score: 0
+    score: 0,
+    scoreCard:function() {
+        scoreCard.innerHTML=this.questions.length+ "/" +this.score;
+        
+    }
 }
 
 
