@@ -1,3 +1,4 @@
+var ui = document.getElementById('ui');
 var scoreCard = document.getElementById('scoreCard');
 var quizBox = document.getElementById('questionContainer');
 var opt1 = document.getElementById('opt1');
@@ -14,6 +15,8 @@ var app = {
         { q:'What is 10% of 200?', options: ['10','300', '20','2000'], answer:3}
     ],
     index: 0,
+
+    //options
     load:function() {
         quizBox.innerHTML = this.questions[this.index].q;
         opt1.innerHTML = this.questions[this.index].options[0];
@@ -24,8 +27,8 @@ var app = {
 
     },
 
+    //check if an answer is correct.
     check:function(e){
-
         var id=e.id.split('');
         if(id[id.length - 1]==this.questions[this.index].answer){
             this.score++;
@@ -38,10 +41,16 @@ var app = {
         }
         
     },
+
+    //prevent other option from been clickable after u have clicked one option.
+    notClickAble:function() {
+        for (let i = 0; i<ul.children.length; i++){
+            ul.children[i].style.pointerEvents="none";
+        }
+    },
     score: 0,
     scoreCard:function() {
         scoreCard.innerHTML=this.questions.length+ "/" +this.score;
-        
     }
 }
 
@@ -50,4 +59,5 @@ window.onload=app.load();
 
 function button(e) {
     app.check(e);
+    app.notClickAble();
 }
