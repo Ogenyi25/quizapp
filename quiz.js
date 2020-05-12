@@ -27,6 +27,11 @@ var app = {
 
     },
 
+    next:function() {
+        this.index++;
+        this.load();
+    },
+
     //check if an answer is correct.
     check:function(e){
         var id=e.id.split('');
@@ -60,4 +65,7 @@ window.onload=app.load();
 function button(e) {
     app.check(e);
     app.notClickAble();
+}
+function next() {
+    app.next();
 }
