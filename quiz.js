@@ -1,4 +1,5 @@
 var ui = document.getElementById('ui');
+var btn = document.getElementById('button');
 var scoreCard = document.getElementById('scoreCard');
 var quizBox = document.getElementById('questionContainer');
 var opt1 = document.getElementById('opt1');
@@ -18,13 +19,22 @@ var app = {
 
     //options
     load:function() {
-        quizBox.innerHTML = this.questions[this.index].q;
+        if(this.index<=this.questions.length-1){
+        quizBox.innerHTML = this.index+1+". "+this.questions[this.index].q;
         opt1.innerHTML = this.questions[this.index].options[0];
         opt2.innerHTML = this.questions[this.index].options[1];
         opt3.innerHTML = this.questions[this.index].options[2];
         opt4.innerHTML = this.questions[this.index].options[3];
-        
-
+                this.scoreCard();
+        }
+        else{
+        quizBox.innerHTML = "Quiz is Over !!!";
+        opt1.style.display="none";
+        opt2.style.display="none";
+        opt3.style.display="none";
+        opt4.style.display="none";
+        btn.style.display="none";
+        }
     },
 
     next:function() {
@@ -53,6 +63,15 @@ var app = {
             ul.children[i].style.pointerEvents="none";
         }
     },
+
+    clickAble:function() {
+        for (let i = 0; i<ul.children.length; i++){
+            ul.children[i].style.pointerEvents="auto";
+            ul.children[i].className;
+        }
+    },
+
+
     score: 0,
     scoreCard:function() {
         scoreCard.innerHTML=this.questions.length+ "/" +this.score;
