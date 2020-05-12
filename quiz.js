@@ -37,6 +37,7 @@ var app = {
         }
     },
 
+    //loads next question
     next:function() {
         this.index++;
         this.load();
@@ -45,36 +46,36 @@ var app = {
     //check if an answer is correct.
     check:function(e){
         var id=e.id.split('');
-        if(id[id.length - 1]==this.questions[this.index].answer){
+        if(id[id.length-1]==this.questions[this.index].answer){
             this.score++;
             e.className="correct";
-            e.innerHTML="Correct"
+            e.innerHTML="Correct";
             this.scoreCard();
         }else {
             e.className="wrong";
-            e.innerHTML="Wrong!!"
+            e.innerHTML="Wrong";
         }
         
     },
 
     //prevent other option from been clickable after u have clicked one option.
     notClickAble:function() {
-        for (let i = 0; i<ul.children.length; i++){
+        for (let i=0;i<ul.children.length;i++){
             ul.children[i].style.pointerEvents="none";
         }
     },
 
     clickAble:function() {
-        for (let i = 0; i<ul.children.length; i++){
+        for (let i=0;i<ul.children.length;i++){
             ul.children[i].style.pointerEvents="auto";
-            ul.children[i].className;
+            ul.children[i].className=''
         }
     },
 
 
-    score: 0,
+    score:0,
     scoreCard:function() {
-        scoreCard.innerHTML=this.questions.length+ "/" +this.score;
+        scoreCard.innerHTML=this.score+"/"+this.questions.length;
     }
 }
 
@@ -87,4 +88,5 @@ function button(e) {
 }
 function next() {
     app.next();
+    app.clickAble();
 }

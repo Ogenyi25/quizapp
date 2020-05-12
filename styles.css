@@ -57,11 +57,11 @@ h1 {
 .quiz-wrapper .options ul li:active {
     box-shadow: 0px 0px 10px grey;
 }
-.quiz-wrapper .options ul li .correct {
+.quiz-wrapper .options ul li.correct {
     background-color: rgb(23, 187, 23);
     box-shadow: 0px 0px 10px rgb(10, 131, 10);
 }
-.quiz-wrapper .options ul li .wrong {
+.quiz-wrapper .options ul li.wrong {
     background-color: rgb(207, 38, 38);
     box-shadow: 0px 0px 10px rgb(167, 21, 21);
 }
