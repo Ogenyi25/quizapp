@@ -1,4 +1,4 @@
-var ui = document.getElementById('ui');
+var ul = document.getElementById('ul');
 var btn = document.getElementById('button');
 var scoreCard = document.getElementById('scoreCard');
 var quizBox = document.getElementById('questionContainer');
@@ -20,7 +20,7 @@ var app = {
     //options
     load:function() {
         if(this.index<=this.questions.length-1){
-        quizBox.innerHTML = this.index+1+". "+this.questions[this.index].q;
+        quizBox.innerHTML = this.index+1 +". "+ this.questions[this.index].q;
         opt1.innerHTML = this.questions[this.index].options[0];
         opt2.innerHTML = this.questions[this.index].options[1];
         opt3.innerHTML = this.questions[this.index].options[2];
