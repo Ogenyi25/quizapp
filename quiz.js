@@ -9,11 +9,39 @@ var opt4 = document.getElementById('opt4');
 
 var app = {
     questions: [
-        { q:'What is 2 * 2?', options: ['4','8', '6','2'], answer:1},
+        { q:'Inside which HTML elements do we put the JavaScript?', options: ['script','javascript', 
+        'scripting','js'], answer:1},
 
-        { q:'What is 10 * 20?', options: ['30','200', '10','100'], answer:2},
+        //{ q:'What is the correct JavaScript syntax to change the content of the HTML element below.<p id="demo">This is a demonstration.</p>', 
+        //options: ['document.getElementById("demo").innerHTML="HelloWorld";','#demo.innerHTML="HelloWorld";', 'document.getElemen("p").innerHTML="HelloWorld";',
+        //'document.getElementByName("p").innerHTML="HelloWorld";'], answer:1},
 
-        { q:'What is 10% of 200?', options: ['10','300', '20','2000'], answer:3}
+        { q:'Where is the correct place to insert a javascript?', options: ['The "head" section','The "body" section', 
+        'Both the "head" and the "body" section is correct','All of the above'], answer:4},
+
+        { q:'What is the correct syntax for referring to an external script called "xxx.js"?', options: ['script src="xxx.js"','script href="xxx.js"', 
+        'script name="xxx.js"','All of the above'], answer:1},
+
+        { q:'How do you write "Hello World" in an alert box?', options: ['msgBox("Hello World");','alert("Hello World");', 
+        'msg("Hello World");','alertBox("Hello World");'], answer:2},
+
+        { q:'How do you create a function in JavaScript?', options: ['function = myFunction()','function myFunction()', 
+        'function:myFunction()','myFunction = function()'], answer:2},
+
+        { q:'In javascript, elements can be gotten by .........', options: ['Id','className', 
+        'name','all of the above'], answer:4},
+
+        { q:'Errors in javascript include all but .........', options: ['syntax error','....', 
+        '....','....'], answer:2},
+
+        { q:'How do you create a function in JavaScript?', options: ['function = myFunction()','function myFunction()', 
+        'function:myFunction()','myFunction = function()'], answer:2},
+
+        { q:'How do you create a function in JavaScript?', options: ['function = myFunction()','function myFunction()', 
+        'function:myFunction()','myFunction = function()'], answer:2},
+
+        { q:'How do you create a function in JavaScript?', options: ['function = myFunction()','function myFunction()', 
+        'function:myFunction()','myFunction = function()'], answer:2},
     ],
     index: 0,
 
