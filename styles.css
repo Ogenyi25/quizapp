@@ -145,7 +145,8 @@ h1 {
         background-color: #fff;
         border-radius: 5px;
         color: #000;
-        font-size: 18px;
+        font-size: 15px;
+        font-weight: 600;
         float: left;
         width: 85vw;
         margin-left: -15px;
@@ -171,6 +172,7 @@ h1 {
         font-size: 15px;
         box-shadow: 0px 0px 10px grey;
         cursor: pointer;
+        text-align: center;
     }
     .quiz-wrapper .options ul li:active {
         box-shadow: 0px 0px 10px grey;
